@@ -1,0 +1,20 @@
+[mysqld_safe]
+log-error          = mysql.err
+
+[mysqld]
+server-id          = 100
+pid-file           = /var/run/mysqld/mysqld.pid
+socket             = /var/run/mysqld/mysqld.sock
+datadir            = /var/lib/mysql
+secure-file-priv   = NULL
+symbolic-links     = 0
+log-bin            = mysql-bin
+binlog_format      = STATEMENT
+#slave-skip-errors = all
+
+skip-host-cache
+skip-name-resolve
+
+sql_mode = ''
+
+#!includedir /etc/mysql/conf.d/
