@@ -1,0 +1,1 @@
+docker run -d --name my_tomcat -v /opt/my_docker/tomcat:/usr/local/tomcat/webapps -p 8080:8080 tomcat
